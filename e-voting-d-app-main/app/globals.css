@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section-text{
+    line-height: 200%;
+}
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+  }
+  
+  .hamburger-top,.hamburger-middle,.hamburger-bottom{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: #ffffff;
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+  
+  .hamburger-middle{
+    transform: translateY(7px);
+  }
+  .hamburger-bottom{
+    transform: translateY(14px);
+  }
+  
+  .open{
+    transform: rotate(90deg);
+    transform:  translateY(0px);
+  }
+  
+  .open .hamburger-top{
+    transform: rotate(45deg) translateY(6px) translate(6px);
+  }
+  
+  .open .hamburger-middle{
+    display: none;
+  }
+  
+  .open .hamburger-bottom{
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+  }
+
+.box-shadow:hover{
+  background-color: #81fbe9;
+  box-shadow: 0 0 8px 1px #00ffe099;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin-animation {
+  animation: spin 10s linear infinite;
+}
+
+.orbit-animation {
+  animation: spin 20s linear infinite;
+}
+
+.background-green{
+  background-image: linear-gradient(90deg, rgba(0, 230, 118, .6), rgba(35, 247, 221, .6));
+}
+
+::selection {
+  background-color: #23f7dd; 
+  color: black; 
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px; /* width of the scrollbar */
+  height: 10px; /* height of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #36454F; /* background color of the scrollbar track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #a3a3a3; /* background color of the scrollbar thumb */
+  border-radius: 5px; /* border radius of the scrollbar thumb */
+}
+
+@keyframes -animate-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.-animate-spin{
+  animation: spin 1s reverse infinite;
+}
+
+.governance{
+  animation: transitionIn 2s;
+}
